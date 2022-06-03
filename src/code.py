@@ -77,9 +77,9 @@ stations_sel = list(stations_dict.keys())
 print(f'Stations considered: {df_idx.shape[0]}/{n} ({int(round(df_idx.shape[0]/n*100,0))}%)')
 
 # Importing time-series
-# df_gsim = pandas.read_csv(path_gsim, sep=';', index_col=0).T
-# df_grdc = pandas.read_csv(path_grdc, sep=';', index_col=0)
-# df_grdc.index, df_gsim.index = pandas.to_datetime(df_grdc.index, format='%d-%m-%Y'), pandas.to_datetime(df_gsim.index, format='%d-%m-%Y')
+df_gsim = pandas.read_csv(path_gsim, sep=';', index_col=0).T
+df_grdc = pandas.read_csv(path_grdc, sep=';', index_col=0)
+df_grdc.index, df_gsim.index = pandas.to_datetime(df_grdc.index, format='%d-%m-%Y'), pandas.to_datetime(df_gsim.index, format='%d-%m-%Y')
 
 # Plotting
 if plot == True:
